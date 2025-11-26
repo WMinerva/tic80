@@ -12,10 +12,15 @@
 --everything outside of TIC() function
 --is called once at beginning of program
 ------------------------------------
-color = 3
+color = 0
 function TIC()
 	--everything inside is called 60 times per second
 	cls(color)
+	if btnp(4) then
+		color = color + 1
+	elseif btnp(5) then
+		color = color - 1
+	end
 end
 
 -- <TILES>
