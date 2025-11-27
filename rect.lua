@@ -12,10 +12,20 @@
 --everything outside of TIC() function
 --is called once at beginning of program
 ------------------------------------
-color = 3
+cls(12)
+t = 0
 function TIC()
 	--everything inside is called 60 times per second
-	cls(color)
+	t = t + 1
+	if t % 1 == 0 then
+		x = 8 * math.random(0, 29)
+		y = 8 * math.random(0, 16)
+		h = math.random(0, 29)
+		l = math.random(0, 29)
+		color = math.random(0, 15)
+		rect(x, y, h, l, color)
+		-- rectb(x, y, h, l, color + 1)
+	end
 end
 
 -- <TILES>
